@@ -1,3 +1,5 @@
+<img src="https://github.com/abhinavthapa1998/syncscape/assets/84438186/e8f7fefe-e94e-4b2f-b89d-11a589a53b06" width="100%"/>
+
 # Turborepo kitchen sink starter
 
 This is an official starter Turborepo with multiple meta-frameworks all working in harmony and sharing packages.
