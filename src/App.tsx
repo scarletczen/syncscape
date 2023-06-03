@@ -1,8 +1,21 @@
+import { useEffect, useState } from "react";
 import PrivateRoutes from "./routes/PrivateRoutes";
 import PublicRoutes from "./routes/PublicRoutes";
 
 function App() {
-  const isAuthenticated = localStorage.getItem("access_token") ? true : false;
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    localStorage.getItem("access_token") ?? false
+  );
+  useEffect(() => {
+    const setAuth = (e: StorageEvent) => {
+      setIsAuthenticated(true);
+    };
+    addEventListener("storage", setAuth);
+    return () => {
+      removeEventListener("storage", setAuth);
+    };
+  }, []);
+
   return isAuthenticated ? <PrivateRoutes /> : <PublicRoutes />;
 }
 
