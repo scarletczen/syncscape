@@ -1,6 +1,7 @@
-import PrimaryButton from "@components/Button/Button";
+import Button from "@components/Button/Button";
 import Input from "@components/Input/Input";
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -27,18 +28,36 @@ function Login({}: Props) {
             type="password"
           />
         </div>
-        <PrimaryButton>Sign in</PrimaryButton>
-        <PrimaryButton
-          className="flex justify-center gap-4 item-center"
-          variant={{ intent: "outline" }}
-        >
+        <div className="flex items-center justify-between w-full">
+          <div className="flex items-center gap-2">
+            <input id="remember" type="checkbox" />
+            <label
+              htmlFor="remember"
+              className="text-sm font-semibold text-mauve10"
+            >
+              Remember me
+            </label>
+          </div>
+          <Link
+            to={"/forgot-password"}
+            className="text-sm font-semibold text-violet11 hover:underline"
+          >
+            Forgot Password
+          </Link>
+        </div>
+        <Button>Sign in</Button>
+        <Button variant={{ intent: "outline" }}>
           <FcGoogle className="w-5 h-auto" />
           Sign in with Google
-        </PrimaryButton>
-        <div className="w-full"></div>
+        </Button>
         <span className="w-full text-sm text-center">
           Don't have an account?{" "}
-          <span className="font-semibold text-violet11">Sign up</span>
+          <Link
+            to={"/register"}
+            className="font-semibold text-violet11 hover:underline"
+          >
+            Sign up
+          </Link>
         </span>
       </div>
     </div>
