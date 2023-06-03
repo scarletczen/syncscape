@@ -7,7 +7,7 @@ function App() {
     localStorage.getItem("access_token") ?? false
   );
   useEffect(() => {
-    const setAuth = (e: StorageEvent) => {
+    const setAuth = () => {
       setIsAuthenticated(true);
     };
     addEventListener("storage", setAuth);

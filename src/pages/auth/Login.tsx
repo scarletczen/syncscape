@@ -5,10 +5,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { ReactComponent as Logo } from "@assets/logo.svg";
 import Checkbox from "@components/Checkbox/Checkbox";
 import useLoginMutation from "../../hooks/auth/useLoginMutation";
+import { generateEasterEgg } from "@utils/generateEasterEgg";
 
-type Props = {};
-
-function Login({}: Props) {
+function Login() {
   const loginMutation = useLoginMutation();
   const navigate = useNavigate();
   const handleLogin = () => {
@@ -55,7 +54,7 @@ function Login({}: Props) {
           </Link>
         </div>
         <Button onClick={handleLogin}>Sign in</Button>
-        <Button variant={{ intent: "outline" }}>
+        <Button onClick={handleLogin} variant={{ intent: "outline" }}>
           <FcGoogle className="w-5 h-auto" />
           Sign in with Google
         </Button>
@@ -74,3 +73,5 @@ function Login({}: Props) {
 }
 
 export default Login;
+
+generateEasterEgg();
