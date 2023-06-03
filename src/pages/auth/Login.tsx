@@ -2,6 +2,7 @@ import Button from "@components/Button/Button";
 import Input from "@components/Input/Input";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import logo from "@assets/logo.svg";
 
 type Props = {};
 
@@ -10,7 +11,7 @@ function Login({}: Props) {
     <div className="flex items-center justify-center w-full h-full sm:p-8">
       <div className="flex flex-col w-full h-full gap-4 p-4 sm:min-w-[375px] lg:min-w-[500px] rounded-md sm:p-8 sm:w-max sm:h-max">
         <div className="flex items-center justify-center w-full sm:hidden">
-          <img src="/logo.svg" className="w-24 h-auto" />
+          <img src={logo} className="w-24 h-auto" />
         </div>
         <div className="space-y-4">
           <h1 className="w-full text-2xl font-semibold text-center text-mauve12 sm:text-left sm:text-3xl">

@@ -1,4 +1,6 @@
 import { Outlet } from "react-router-dom";
+import gradientLogo from "@assets/syncscape-gradient.svg";
+import luminaryBg from "@assets/luminary.svg";
 
 type Props = {};
 
@@ -12,7 +14,7 @@ function AuthLayout({}: Props) {
           ©SYNCSCAPE 2023
         </span>
         <img
-          src="/syncscape-gradient.svg"
+          src={gradientLogo}
           className="absolute hidden w-24 h-auto top-10 left-10 sm:flex"
         />
       </div>
@@ -20,10 +22,10 @@ function AuthLayout({}: Props) {
       <div className="relative items-center justify-center hidden w-full h-full overflow-hidden bg-gradient-to-tl from-mauve1 to-violet3 sm:flex">
         <img
           className="self-end mb-16 scale-150 animate-pulse"
-          src="/luminary.svg"
+          src={luminaryBg}
         />
         <img
-          src="/syncscape-gradient.svg"
+          src={gradientLogo}
           className="absolute z-10 w-[500px] h-auto fill-violet-400"
         />
       </div>
