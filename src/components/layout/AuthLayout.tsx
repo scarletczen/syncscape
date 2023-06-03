@@ -1,25 +1,25 @@
 import { Outlet } from "react-router-dom";
+import { ReactComponent as GradientLogo } from "@assets/syncscape-gradient.svg";
+import { ReactComponent as LuminaryBg } from "@assets/luminary.svg";
 
 type Props = {};
 
 function AuthLayout({}: Props) {
   return (
     <div className="w-full h-full grid-cols-2 sm:grid">
+      {/* BODY */}
       <div className="relative w-full h-full bg-mauve1">
         <Outlet />
         <span className="absolute text-xs bottom-10 left-10 text-mauve10">
           ©SYNCSCAPE 2023
         </span>
-        <img
-          src="/syncscape-gradient.svg"
-          className="absolute hidden w-24 h-auto top-10 left-10 sm:flex"
-        />
+        <GradientLogo className="absolute hidden w-24 h-auto top-10 left-10 sm:flex" />
       </div>
-      <div className="items-center justify-center hidden w-full h-full bg-gradient-to-tl from-violet-50 to-violet-100 sm:flex">
-        <img
-          src="/syncscape-gradient.svg"
-          className="w-[500px] h-auto fill-violet-400"
-        />
+      {/* IMAGE */}
+      <div className="relative items-center justify-center hidden w-full h-full overflow-hidden bg-gradient-to-tl from-mauve1 to-violet3 sm:flex">
+        <LuminaryBg className="absolute top-0 h-3/4 scale-y-[-1] animate-pulse" />
+        <LuminaryBg className="absolute bottom-0 animate-pulse" />
+        <GradientLogo className="absolute z-10 w-[500px] h-auto fill-violet-400" />
       </div>
     </div>
   );
