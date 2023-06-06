@@ -6,11 +6,11 @@ type Props = {};
 
 function AuthLayout({}: Props) {
   return (
-    <div className="w-full h-full grid-cols-2 sm:grid">
+    <div className="w-full h-full min-h-[100vh] grid-cols-2 sm:grid">
       {/* BODY */}
-      <div className="relative w-full h-full bg-mauve1">
+      <div className="relative w-full h-full overflow-y-auto bg-mauve1">
         <Outlet />
-        <span className="absolute text-xs bottom-10 left-10 text-mauve10">
+        <span className="absolute hidden text-xs sm:flex bottom-10 left-10 text-mauve10">
           ©SYNCSCAPE 2023
         </span>
         <GradientLogo className="absolute hidden w-24 h-auto top-10 left-10 sm:flex" />

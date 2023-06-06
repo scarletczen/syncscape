@@ -22,7 +22,7 @@ function Register() {
   };
   return (
     <main className="flex items-center justify-center w-full h-full sm:p-8">
-      <div className="flex flex-col w-full gap-8 p-4 sm:min-w-[375px] lg:min-w-[500px] max-w-[500px] rounded-md sm:p-8 sm:w-max">
+      <div className="flex flex-col h-full sm:h-max w-full gap-8 p-4 sm:min-w-[375px] lg:min-w-[500px] max-w-[500px] rounded-md sm:p-8 sm:w-max">
         <div className="flex items-center justify-center w-full sm:hidden">
           <Logo className="w-24 h-auto" />
         </div>
