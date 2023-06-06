@@ -15,19 +15,4 @@
     text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
     -webkit-tap-highlight-color: transparent;
   }
-  html {
-    height: 100vh;
-    width: 100vw;
-  }
-  html,
-  body,
-  #root {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-grow: 1;
-    max-height: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
 }
